@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0; /* Light green theme */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #4CAF50; /* Green for the e-waste theme */
+        }
+
+        .login-container input, .login-container select, .login-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Book Now</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="e-mail" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <!-- Designation Dropdown -->
+            <select name="designation" required>
+                <option value="" disabled selected>Select Designation</option>
+                <option value="student">Students</option>
+                <option value="teacher">Teachers</option>
+                <option value="manager">organizations</option>
+                <option value="employee">others</option>
+            </select>
+
+            <!-- Others Textarea -->
+            <textarea name="others" placeholder="Enter any additional details here" rows="3"></textarea>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
